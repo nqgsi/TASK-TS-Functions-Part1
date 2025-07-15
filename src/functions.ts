@@ -5,7 +5,7 @@
  * - that just prints (logs) that "name" on the screen
  */
 function printName(name: string): void {
-  // write your code here
+  console.log(name);
 }
 
 /**
@@ -15,8 +15,10 @@ function printName(name: string): void {
  * - and prints (logs) the age on the screen
  * - Age = current year - birth
  */
-function printAge(birthYear: number): void {
-  // write your code here
+function printAge(birthYear: number, newYear: number): void {
+  const age =  newYear - birthYear;
+   console.log(`your age is ${age}`);
+
 }
 
 // example:
@@ -39,7 +41,19 @@ printAge(2000); // => 2025 (2025 - 2000)
 type LanguageType = "en" | "es" | "fr" | "tr";
 
 function printHello(name: string, language: LanguageType): void {
-  // write your code here
+  if(language === "en"){
+console.log(`hello ${name}`);
+  }
+  else if(language === "es"){
+    console.log(`hola ${name}`);
+  }
+  else if(language === "fr"){
+    console.log(`bonjour ${name}`);
+  }
+  else if(language === "tr"){
+    console.log(`merhaba ${name}`);
+  
+
 }
 
 // example:
@@ -55,9 +69,18 @@ printHello("Aziz", "fr"); // => "Bonjour Aziz"
  * - should print out the bigger number
  */
 function printMax(x: number, y: number) {
-  // write your code here
+  if(x > y){
+    console.log(`the bigger number is ${x}`);
+  }
+  else if(y > x)
+  {
+    console.log(`the bigger number is ${y}`);
+  
 }
-
+else{
+  console.log("x and y are equal");
+}
+}
 // example:
 printMax(4, 7); // => 7
 
